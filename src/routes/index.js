@@ -1,13 +1,15 @@
-import { NavigationContainer } from '@react-navigation/native';
-import React from 'react'
+import { NavigationContainer } from "@react-navigation/native";
+import { extendTheme } from "native-base";
+import React from "react";
 
-import SplashRoutes from './splash.routes';
+import SplashRoutes from "./splash.routes";
+
 function Routes() {
   return (
     <NavigationContainer>
-        <SplashRoutes />
+      <SplashRoutes />
     </NavigationContainer>
-  )
+  );
 }
 
-export default Routes
+export default Routes;
