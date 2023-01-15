@@ -2,15 +2,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import HalamanAwal from "../screens/HalamanAwal";
 import AuthRoutes from "./auth.routes";
-
+import TugasRoutes from "./tugas.routes";
+const { Navigator, Screen } = createStackNavigator();
 export default function SplashRoutes() {
-  const { Navigator, Screen } = createStackNavigator();
   return (
-    <Navigator
-      initialRouteName="HalamanAwal"
-      screenOptions={{ headerShown: false }}
-    >
-      <Screen name="Home" component={AuthRoutes} />
+    <Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
+      <Screen name="Home" component={TugasRoutes} />
     </Navigator>
   );
 }

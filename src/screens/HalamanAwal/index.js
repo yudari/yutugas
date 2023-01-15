@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import { Button, Center, Text, View } from "native-base";
 import IconBrand from "../../assets/icons/IconBrand";
 
 function HalamanAwal() {
+  const navigation = useNavigation();
   return (
     <View
       flex={1}
@@ -38,6 +40,9 @@ function HalamanAwal() {
           variant={`solid`}
           colorScheme={`emerald`}
           size={`md`}
+          onPress={() => {
+            navigation.navigate("Halaman Login");
+          }}
         >
           Login
         </Button>
@@ -49,6 +54,9 @@ function HalamanAwal() {
           variant={`solid`}
           colorScheme={`danger`}
           size={`md`}
+          onPress={() => {
+            navigation.navigate("Halaman Daftar");
+          }}
         >
           Daftar
         </Button>
